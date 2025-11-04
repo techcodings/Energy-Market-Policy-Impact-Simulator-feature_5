@@ -1,0 +1,236 @@
+/* ================================
+   ⚡ ENERGYVERSE — SOFT NEON UI
+================================== */
+
+:root {
+  --bg: #010a04;
+  --bg-card: rgba(8, 20, 8, 0.45);
+  --border: rgba(150,255,80,0.18);
+  --accent: #caff3a;
+  --accent-soft: #9cff52;
+  --accent-dim: #7bff3a;
+  --text: #e4ffd2;
+  --text-dim: #8aff65;
+}
+
+/* Body */
+body {
+  background: radial-gradient(circle at 30% 20%, #002407, #000b05);
+  font-family: "Inter", sans-serif;
+  color: var(--text);
+}
+
+/* Page Wrapper */
+.app-wrap {
+  max-width: 1250px;
+  margin: auto;
+  padding: 24px;
+}
+
+/* Headings */
+h1, h2, h3 {
+  color: var(--accent);
+  font-weight: 700;
+  text-shadow: 0 0 5px rgba(202,255,58,0.55);
+}
+
+/* Card */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  padding: 16px;
+  border-radius: 12px;
+  backdrop-filter: blur(14px);
+  box-shadow: 0 0 12px rgba(150,255,80,0.20);
+  transition: 0.22s ease;
+  animation: fadeUp .6s ease forwards;
+}
+
+/* Hover subtle — Not too bright */
+.card:hover {
+  box-shadow: 0 0 18px rgba(150,255,80,0.28);
+  transform: translateY(-2px);
+}
+
+/* Inputs */
+label {
+  font-size: 14px;
+  color: var(--text-dim);
+  opacity: 0.85;
+}
+input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  background: rgba(10,30,10,0.75);
+  color: var(--text);
+  border: 1px solid rgba(150,255,80,0.25);
+}
+input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 8px rgba(150,255,80,0.45);
+  outline: none;
+}
+
+/* Buttons */
+button {
+  background: var(--accent);
+  border: none;
+  color: #000;
+  padding: 9px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.22s;
+}
+button:hover {
+  background: var(--accent-soft);
+  box-shadow: 0 0 10px rgba(150,255,80,0.35);
+}
+
+/* Layout Grid */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+/* Chart axis neon styling */
+.recharts-cartesian-axis-tick text {
+  fill: var(--accent) !important;
+  opacity: 0.75;
+}
+.recharts-tooltip-wrapper {
+  background: rgba(0,0,0,0.55) !important;
+}
+/* Form Title */
+.form-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: var(--accent);
+}
+/* Make the form inputs smaller width */
+.form-grid {
+  display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+  gap: 14px 28px; /* vertical, horizontal spacing */
+  justify-content: start; /* align left */
+}
+
+/* Input size control */
+.form-field input {
+  width: 150px; /* 👈 set fixed width */
+  max-width: 100%;
+  padding: 8px 10px;
+  border-radius: 8px;
+  background: rgba(10, 22, 10, 0.6);
+  border: 1px solid rgba(140, 255, 70, 0.22);
+  color: var(--text);
+  transition: 0.25s;
+  font-size: 14px;
+}
+
+/* Form field labels clean + subtle */
+.form-field label {
+  font-size: 13px;
+  color: var(--text-dim);
+  margin-bottom: 4px;
+  display: block;
+}
+
+.form-field input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 8px rgba(150, 255, 60, 0.35);
+  transform: translateY(-1px);
+}
+
+/* Buttons row */
+.btn-row {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+/* Button style softer neon */
+.btn-row button {
+  flex: 1;
+  padding: 9px 14px;
+  background: var(--accent);
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #000;
+  transition: 0.25s;
+}
+
+.btn-row button:hover {
+  background: var(--accent-soft);
+  box-shadow: 0 0 12px rgba(160,255,60,0.35);
+  transform: translateY(-2px);
+}
+
+/* Fade animation for card */
+.fade {
+  animation: fadeInUp .5s ease forwards;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Fade In Animation */
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(10px);}
+  to {opacity:1; transform:translateY(0);}
+}
+/* ✅ Mobile responsiveness */
+@media(max-width: 900px) {
+  .grid-2 {
+    grid-template-columns: 1fr !important;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr !important;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .form-field input {
+    width: 50% !important; /* Full width mobile input */
+  }
+
+  .card {
+    padding: 14px 12px;
+  }
+
+ 
+.btn-row {
+  display: flex;
+  justify-content: center; /* center horizontally */
+    flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+  .btn-row button {
+    width: 80% !important;
+  }
+}
+
+/* ✅ Ultra-small devices (<= 450px like small Android phones) */
+@media(max-width: 450px) {
+  h1 {
+    font-size: 20px;
+  }
+  .form-title {
+    font-size: 16px;
+  }
+  .card {
+    border-radius: 10px;
+  }
+  body {
+    padding: 6px;
+  }
+}
