@@ -6,7 +6,9 @@ import MapImpact from '../components/MapImpact'
 import SummaryBox from '../components/SummaryBox'
 import "../components/styles.css"
 
-const API = import.meta.env.VITE_API_URL || 'http://localhost:8001'
+const API = import.meta.env.VITE_API_URL;
+console.log("API Loaded:", API);
+
 
 export default function App() {
   const [history, setHistory] = useState(null)
