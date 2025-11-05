@@ -6,7 +6,7 @@ import MapImpact from '../components/MapImpact'
 import SummaryBox from '../components/SummaryBox'
 import "../components/styles.css"
 
-const API = import.meta.env.VITE_API_URL;
+const API = "https://magical-croquembouche-f2f64c.netlify.app/api";
 console.log("API Loaded:", API);
 
 
