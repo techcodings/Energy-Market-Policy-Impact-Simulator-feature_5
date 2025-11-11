@@ -45,6 +45,18 @@ h1, h2, h3 {
   transition: 0.22s ease;
   animation: fadeUp .6s ease forwards;
 }
+.btn-back-top {
+  animation: pulseGlow 2s infinite alternate;
+}
+
+@keyframes pulseGlow {
+  from {
+    box-shadow: 0 0 10px rgba(186, 255, 55, 0.4);
+  }
+  to {
+    box-shadow: 0 0 20px rgba(186, 255, 55, 0.9);
+  }
+}
 
 /* Hover subtle — Not too bright */
 .card:hover {
