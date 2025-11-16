@@ -50,7 +50,7 @@ export default function PolicyForm({ policy, onChange, onRun, onMap, onSummary }
 
       <div className="btn-row">
         <button onClick={onRun}>Run Policy</button>
-        <button onClick={onMap}>View Map</button>
+        
         <button onClick={onSummary}>Generate Summary</button>
       </div>
     </div>
